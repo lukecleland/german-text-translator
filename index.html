@@ -1,0 +1,38 @@
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<script src="http://code.jquery.com/jquery.js"></script>
+
+
+<style>
+
+    .button {
+        width:300px;
+        height:300px; 
+        border:1px solid black;
+    }   
+    
+    
+</style>
+
+<h2>Click the square to capture German text your camera, then click the circle to translate the photo</h2>
+
+<form id="uploadForm"
+     enctype="multipart/form-data"
+     action="/upload"
+     method="post">
+    <input type="file" value="" name="imageFile" class="button" id="imageFile" /><br>
+    <input type="submit" class="button">
+    <ul id="messages"></ul>
+</form>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    socket.on('status', function(msg){
+        $('#messages').append($('<li>').text(msg));
+    });
+</script>
+
+
