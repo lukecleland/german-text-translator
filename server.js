@@ -2,24 +2,76 @@ var tesseract = require('node-tesseract');
 var multer = require('multer');
 var express = require('express');
 var app = express();
-var server = app.listen(8080);
-var io = require('socket.io').listen(server);
 var Imagemin = require('imagemin');
-
-
 var apikey = 'AIzaSyAl2_VXl-axjtU_zGj-s8h1ShY3H3Le_14';
-
 var googleTranslate = require('google-translate')(apikey);
+
+var server = app.listen(8080, function(){
+    console.log('Server Started');
+});
+
+var io = require('socket.io').listen(server, function(){
+    console.log('Socket io Started');
+});
 
 
 var storage = multer.diskStorage({
+    
   destination: function (req, file, cb) {
     cb(null, './uploads/')
   },
+    
   filename: function (req, file, cb) {
-    cb(null, 'latestfile.jpg')
+    cb(null, 'latestfile.jpg');
+    
+    console.log('Image Uploaded...');
+    io.emit('status', 'Image Uploaded...');
+    io.emit('status', 'Compressing Image...');
+      
+    new Imagemin()
+        .src(__dirname + '/uploads/*.{gif,jpg,png,svg}')
+        .dest(__dirname + '/uploads/')
+        .use(Imagemin.jpegtran({progressive: true}))
+        .run(function (err, files) {
+        
+            console.log('Compression done, starting OCR');
+            io.emit('status', 'Compression done, starting OCR');
+        
+            tesseract.process(__dirname + '/uploads/latestfile.jpg', options, function(err, inputtext) {
+                
+                if(err) {
+                    console.error(err);
+                } else {
+                    
+                    console.log('File OCR Done... translating');
+                    io.emit('status', 'File OCR Done... translating');
+                    
+                    // put together word list
+                    wordlist = '';
+                    inputtextArray = inputtext.split(' ');
+                    for(i=0;i<=inputtextArray.length;i++){
+                        googleTranslate.translate(inputtextArray[i], 'en', function(err, translation) {
+                            translatedword = translation.translatedText;
+                            var line = inputtextArray[i]+' : '+translatedword;
+                            wordlist += line;  
+                        });
+                    }  
+                    
+                    console.log(wordlist);
+                    io.emit('status', wordlist);
+                    
+                    googleTranslate.translate(inputtext, 'en', function(err, translation) {
+                      console.log(translation.translatedText);
+                      io.emit('status', 'Translated Output: '+translation.translatedText);
+                    });
+                    
+                }
+            });
+        });
+      
   }
 });
+
 
 var upload = multer({ storage: storage }).single('imageFile');
 
@@ -40,7 +92,6 @@ app.get('/', function(req, res){
 });
 
 
-
 app.post('/upload', function (req, res, next) {
   io.emit('status', 'Image Uploading...');
 console.log('Image Uploading...');
@@ -49,35 +100,8 @@ console.log('Image Uploading...');
       // An error occurred when uploading
       return
     }
-    console.log('Image Uploaded...');
-    io.emit('status', 'Image Uploaded...');
-    io.emit('status', 'Compressing Image...');
-      
-    new Imagemin()
-        .src(__dirname + '/uploads/*.{gif,jpg,png,svg}')
-        .dest(__dirname + '/uploads/')
-        .use(Imagemin.jpegtran({progressive: true}))
-        .run(function (err, files) {
-            console.log(files[0]);
-        
-            console.log('Compression done, starting OCR');
-            io.emit('status', 'Compression done, starting OCR');
-        
-            tesseract.process(__dirname + '/uploads/latestfile.jpg', options, function(err, inputtext) {
-                if(err) {
-                    console.error(err);
-                } else {
-                    console.log('File OCR Done... translating');
-                      io.emit('status', 'File OCR Done... translating');
-                    googleTranslate.translate(inputtext, 'en', function(err, translation) {
-                      console.log(translation.translatedText);
-                      io.emit('status', 'Translated Output: '+translation.translatedText);
-                    });
-                }
-            })
-        });  
-  })
-})
+  });
+});
 
 
 
