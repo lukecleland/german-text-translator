@@ -1,0 +1,534 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/4.1.1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'canvas' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.1
+4 verbose install initial load of /Users/lukecleland/web/german-text-translator/package.json
+5 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/colors/package.json
+6 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/express/package.json
+7 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/google-translate/package.json
+8 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/image-rotate/package.json
+9 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/imagemin/package.json
+10 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/multer/package.json
+11 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/node-tesseract/package.json
+12 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/rotate-image/package.json
+13 verbose installManyTop reading scoped package data from /Users/lukecleland/web/german-text-translator/node_modules/socket.io/package.json
+14 info package.json socket.io@1.3.7 No license field.
+15 verbose readDependencies loading dependencies from /Users/lukecleland/web/german-text-translator/package.json
+16 silly cache add args [ 'canvas', null ]
+17 verbose cache add spec canvas
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: 'canvas',
+18 silly cache add   scope: null,
+18 silly cache add   name: 'canvas',
+18 silly cache add   rawSpec: '',
+18 silly cache add   spec: '*',
+18 silly cache add   type: 'range' }
+19 silly addNamed canvas@*
+20 verbose addNamed "*" is a valid semver range for canvas
+21 silly addNameRange { name: 'canvas', range: '*', hasData: false }
+22 silly mapToRegistry name canvas
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/canvas
+26 verbose addNameRange registry:https://registry.npmjs.org/canvas not in flight; fetching
+27 verbose request uri https://registry.npmjs.org/canvas
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 8:03:27 PM
+30 verbose request id 5182bbbe657f92df
+31 verbose etag "2CLU9W5YI8G9A3DFKVCS7J0EK"
+32 http request GET https://registry.npmjs.org/canvas
+33 http 304 https://registry.npmjs.org/canvas
+34 silly get cb [ 304,
+34 silly get   { date: 'Wed, 07 Oct 2015 09:03:26 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     'cache-control': 'max-age=60',
+34 silly get     etag: '"2CLU9W5YI8G9A3DFKVCS7J0EK"',
+34 silly get     age: '0',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-syd1627-SYD',
+34 silly get     'x-cache': 'MISS',
+34 silly get     'x-cache-hits': '0',
+34 silly get     'x-timer': 'S1444208606.932727,VS0,VE741',
+34 silly get     vary: 'Accept' } ]
+35 verbose etag https://registry.npmjs.org/canvas from cache
+36 verbose get saving canvas to /Users/lukecleland/.npm/registry.npmjs.org/canvas/.cache.json
+37 silly addNameRange number 2 { name: 'canvas', range: '*', hasData: true }
+38 silly addNameRange versions [ 'canvas',
+38 silly addNameRange   [ '0.0.1',
+38 silly addNameRange     '0.0.2',
+38 silly addNameRange     '0.0.3',
+38 silly addNameRange     '0.0.4',
+38 silly addNameRange     '0.0.5',
+38 silly addNameRange     '0.0.6',
+38 silly addNameRange     '0.0.7',
+38 silly addNameRange     '0.0.8',
+38 silly addNameRange     '0.1.0',
+38 silly addNameRange     '0.2.0',
+38 silly addNameRange     '0.2.1',
+38 silly addNameRange     '0.3.0',
+38 silly addNameRange     '0.3.1',
+38 silly addNameRange     '0.3.2',
+38 silly addNameRange     '0.3.3',
+38 silly addNameRange     '0.4.0',
+38 silly addNameRange     '0.4.1',
+38 silly addNameRange     '0.4.2',
+38 silly addNameRange     '0.4.3',
+38 silly addNameRange     '0.5.0',
+38 silly addNameRange     '0.5.1',
+38 silly addNameRange     '0.5.2',
+38 silly addNameRange     '0.5.3',
+38 silly addNameRange     '0.5.4',
+38 silly addNameRange     '0.6.0',
+38 silly addNameRange     '0.7.0',
+38 silly addNameRange     '0.7.1',
+38 silly addNameRange     '0.7.2',
+38 silly addNameRange     '0.7.3',
+38 silly addNameRange     '0.8.0',
+38 silly addNameRange     '0.8.1',
+38 silly addNameRange     '0.8.2',
+38 silly addNameRange     '0.8.3',
+38 silly addNameRange     '0.9.0',
+38 silly addNameRange     '0.10.0',
+38 silly addNameRange     '0.10.1',
+38 silly addNameRange     '0.10.2',
+38 silly addNameRange     '0.10.3',
+38 silly addNameRange     '0.11.0',
+38 silly addNameRange     '0.11.1',
+38 silly addNameRange     '0.11.2',
+38 silly addNameRange     '0.11.3',
+38 silly addNameRange     '0.12.0',
+38 silly addNameRange     '0.12.1',
+38 silly addNameRange     '0.13.0',
+38 silly addNameRange     '0.13.1',
+38 silly addNameRange     '1.0.0',
+38 silly addNameRange     '1.0.1',
+38 silly addNameRange     '1.0.2',
+38 silly addNameRange     '1.0.3',
+38 silly addNameRange     '1.0.4',
+38 silly addNameRange     '1.1.0',
+38 silly addNameRange     '1.1.1',
+38 silly addNameRange     '1.1.2',
+38 silly addNameRange     '1.1.3',
+38 silly addNameRange     '1.1.4',
+38 silly addNameRange     '1.1.5',
+38 silly addNameRange     '1.1.6',
+38 silly addNameRange     '1.2.0',
+38 silly addNameRange     '1.2.1',
+38 silly addNameRange     '1.2.2',
+38 silly addNameRange     '1.2.3',
+38 silly addNameRange     '1.2.4',
+38 silly addNameRange     '1.2.5',
+38 silly addNameRange     '1.2.6',
+38 silly addNameRange     '1.2.7',
+38 silly addNameRange     '1.2.8',
+38 silly addNameRange     '1.2.9' ] ]
+39 silly addNamed canvas@1.2.9
+40 verbose addNamed "1.2.9" is a plain semver version for canvas
+41 silly cache afterAdd canvas@1.2.9
+42 verbose afterAdd /Users/lukecleland/.npm/canvas/1.2.9/package/package.json not in flight; writing
+43 verbose afterAdd /Users/lukecleland/.npm/canvas/1.2.9/package/package.json written
+44 silly install resolved [ { name: 'canvas',
+44 silly install resolved     description: 'Canvas graphics API backed by Cairo',
+44 silly install resolved     version: '1.2.9',
+44 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+44 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+44 silly install resolved     keywords:
+44 silly install resolved      [ 'canvas',
+44 silly install resolved        'graphic',
+44 silly install resolved        'graphics',
+44 silly install resolved        'pixman',
+44 silly install resolved        'cairo',
+44 silly install resolved        'image',
+44 silly install resolved        'images',
+44 silly install resolved        'pdf' ],
+44 silly install resolved     homepage: 'https://github.com/Automattic/node-canvas',
+44 silly install resolved     repository:
+44 silly install resolved      { type: 'git',
+44 silly install resolved        url: 'git://github.com/Automattic/node-canvas.git' },
+44 silly install resolved     scripts: { test: 'make test', install: 'node-gyp rebuild' },
+44 silly install resolved     dependencies: { nan: '^2.0.9' },
+44 silly install resolved     devDependencies:
+44 silly install resolved      { 'body-parser': '^1.13.3',
+44 silly install resolved        express: '^4.13.2',
+44 silly install resolved        jade: '^1.11.0',
+44 silly install resolved        mocha: '*' },
+44 silly install resolved     engines: { node: '>=0.8.0' },
+44 silly install resolved     main: './lib/canvas.js',
+44 silly install resolved     license: 'MIT',
+44 silly install resolved     gypfile: true,
+44 silly install resolved     gitHead: 'eb97ef838658ee7a9cafb44bb20f3253e044e42b',
+44 silly install resolved     bugs: { url: 'https://github.com/Automattic/node-canvas/issues' },
+44 silly install resolved     _id: 'canvas@1.2.9',
+44 silly install resolved     _shasum: '40f36e8f34bea2283c944511dfb575d168003061',
+44 silly install resolved     _from: 'canvas@*',
+44 silly install resolved     _npmVersion: '2.12.1',
+44 silly install resolved     _nodeVersion: '0.12.7',
+44 silly install resolved     _npmUser: { name: 'linusu', email: 'linus@folkdatorn.se' },
+44 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+44 silly install resolved     dist:
+44 silly install resolved      { shasum: '40f36e8f34bea2283c944511dfb575d168003061',
+44 silly install resolved        tarball: 'http://registry.npmjs.org/canvas/-/canvas-1.2.9.tgz' },
+44 silly install resolved     directories: {},
+44 silly install resolved     _resolved: 'https://registry.npmjs.org/canvas/-/canvas-1.2.9.tgz',
+44 silly install resolved     readme: 'ERROR: No README data found!' } ]
+45 info install canvas@1.2.9 into /Users/lukecleland/web/german-text-translator
+46 info installOne canvas@1.2.9
+47 verbose installOne of canvas to /Users/lukecleland/web/german-text-translator not in flight; installing
+48 verbose lock using /Users/lukecleland/.npm/_locks/canvas-24e9fb555e9ebdcc.lock for /Users/lukecleland/web/german-text-translator/node_modules/canvas
+49 silly install write writing canvas 1.2.9 to /Users/lukecleland/web/german-text-translator/node_modules/canvas
+50 verbose unbuild node_modules/canvas
+51 silly gentlyRm /Users/lukecleland/web/german-text-translator/node_modules/canvas is being purged from base /Users/lukecleland/web/german-text-translator
+52 verbose gentlyRm don't care about contents; nuking /Users/lukecleland/web/german-text-translator/node_modules/canvas
+53 verbose tar unpack /Users/lukecleland/.npm/canvas/1.2.9/package.tgz
+54 verbose tar unpacking to /Users/lukecleland/web/german-text-translator/node_modules/canvas
+55 silly gentlyRm /Users/lukecleland/web/german-text-translator/node_modules/canvas is being purged
+56 verbose gentlyRm don't care about contents; nuking /Users/lukecleland/web/german-text-translator/node_modules/canvas
+57 silly gunzTarPerm modes [ '755', '644' ]
+58 silly gunzTarPerm extractEntry package.json
+59 silly gunzTarPerm extractEntry .npmignore
+60 silly gunzTarPerm extractEntry index.js
+61 silly gunzTarPerm extractEntry History.md
+62 silly gunzTarPerm extractEntry Makefile
+63 silly gunzTarPerm extractEntry Readme.md
+64 silly gunzTarPerm extractEntry binding.gyp
+65 silly gunzTarPerm extractEntry .gitmodules
+66 silly gunzTarPerm extractEntry install
+67 silly gunzTarPerm extractEntry lib/bindings.js
+68 silly gunzTarPerm extractEntry lib/canvas.js
+69 silly gunzTarPerm extractEntry lib/context2d.js
+70 silly gunzTarPerm extractEntry lib/image.js
+71 silly gunzTarPerm extractEntry lib/jpegstream.js
+72 silly gunzTarPerm extractEntry lib/pngstream.js
+73 silly gunzTarPerm extractEntry .travis.yml
+74 silly gunzTarPerm extractEntry src/Image.cc
+75 silly gunzTarPerm extractEntry src/Canvas.cc
+76 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+77 silly gunzTarPerm extractEntry src/CanvasGradient.h
+78 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+79 silly gunzTarPerm extractEntry src/CanvasPattern.h
+80 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+81 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+82 silly gunzTarPerm extractEntry src/FontFace.cc
+83 silly gunzTarPerm extractEntry src/FontFace.h
+84 silly gunzTarPerm extractEntry src/Canvas.h
+85 silly gunzTarPerm extractEntry src/Image.h
+86 silly gunzTarPerm extractEntry src/ImageData.cc
+87 silly gunzTarPerm extractEntry src/ImageData.h
+88 silly gunzTarPerm extractEntry src/JPEGStream.h
+89 silly gunzTarPerm extractEntry src/PNG.h
+90 silly gunzTarPerm extractEntry src/Point.h
+91 silly gunzTarPerm extractEntry src/closure.h
+92 silly gunzTarPerm extractEntry src/color.cc
+93 silly gunzTarPerm extractEntry src/color.h
+94 silly gunzTarPerm extractEntry src/init.cc
+95 silly gunzTarPerm extractEntry util/cairo_include.sh
+96 silly gunzTarPerm extractEntry util/has_cairo_freetype.sh
+97 silly gunzTarPerm extractEntry util/has_lib.sh
+98 silly gunzTarPerm extractEntry util/lib_lookup.sh
+99 verbose write writing to /Users/lukecleland/web/german-text-translator/node_modules/canvas/package.json
+100 info preinstall canvas@1.2.9
+101 verbose readDependencies loading dependencies from /Users/lukecleland/web/german-text-translator/node_modules/canvas/package.json
+102 silly prepareForInstallMany adding nan@^2.0.9 from canvas dependencies
+103 verbose readDependencies loading dependencies from /Users/lukecleland/web/german-text-translator/node_modules/canvas/package.json
+104 silly cache add args [ 'nan@^2.0.9', null ]
+105 verbose cache add spec nan@^2.0.9
+106 silly cache add parsed spec Result {
+106 silly cache add   raw: 'nan@^2.0.9',
+106 silly cache add   scope: null,
+106 silly cache add   name: 'nan',
+106 silly cache add   rawSpec: '^2.0.9',
+106 silly cache add   spec: '>=2.0.9 <3.0.0',
+106 silly cache add   type: 'range' }
+107 silly addNamed nan@>=2.0.9 <3.0.0
+108 verbose addNamed ">=2.0.9 <3.0.0" is a valid semver range for nan
+109 silly addNameRange { name: 'nan', range: '>=2.0.9 <3.0.0', hasData: false }
+110 silly mapToRegistry name nan
+111 silly mapToRegistry using default registry
+112 silly mapToRegistry registry https://registry.npmjs.org/
+113 silly mapToRegistry uri https://registry.npmjs.org/nan
+114 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+115 verbose request uri https://registry.npmjs.org/nan
+116 verbose request no auth needed
+117 info attempt registry request try #1 at 8:03:28 PM
+118 verbose etag "1L4RU1AM541YSVP1YQFXG1Y1J"
+119 http request GET https://registry.npmjs.org/nan
+120 http 304 https://registry.npmjs.org/nan
+121 silly get cb [ 304,
+121 silly get   { date: 'Wed, 07 Oct 2015 09:03:28 GMT',
+121 silly get     via: '1.1 varnish',
+121 silly get     'cache-control': 'max-age=60',
+121 silly get     etag: '"1L4RU1AM541YSVP1YQFXG1Y1J"',
+121 silly get     age: '7',
+121 silly get     connection: 'keep-alive',
+121 silly get     'x-served-by': 'cache-syd1621-SYD',
+121 silly get     'x-cache': 'HIT',
+121 silly get     'x-cache-hits': '36',
+121 silly get     'x-timer': 'S1444208608.039561,VS0,VE0',
+121 silly get     vary: 'Accept' } ]
+122 verbose etag https://registry.npmjs.org/nan from cache
+123 verbose get saving nan to /Users/lukecleland/.npm/registry.npmjs.org/nan/.cache.json
+124 silly addNameRange number 2 { name: 'nan', range: '>=2.0.9 <3.0.0', hasData: true }
+125 silly addNameRange versions [ 'nan',
+125 silly addNameRange   [ '0.3.0-wip',
+125 silly addNameRange     '0.3.0-wip2',
+125 silly addNameRange     '0.3.0',
+125 silly addNameRange     '0.3.1',
+125 silly addNameRange     '0.3.2',
+125 silly addNameRange     '0.4.0',
+125 silly addNameRange     '0.4.1',
+125 silly addNameRange     '0.4.2',
+125 silly addNameRange     '0.4.3',
+125 silly addNameRange     '0.4.4',
+125 silly addNameRange     '0.5.0',
+125 silly addNameRange     '0.5.1',
+125 silly addNameRange     '0.5.2',
+125 silly addNameRange     '0.6.0',
+125 silly addNameRange     '0.7.0',
+125 silly addNameRange     '0.7.1',
+125 silly addNameRange     '0.8.0',
+125 silly addNameRange     '1.0.0',
+125 silly addNameRange     '1.1.0',
+125 silly addNameRange     '1.1.1',
+125 silly addNameRange     '1.1.2',
+125 silly addNameRange     '1.2.0',
+125 silly addNameRange     '1.3.0',
+125 silly addNameRange     '1.4.0',
+125 silly addNameRange     '1.4.1',
+125 silly addNameRange     '1.5.0',
+125 silly addNameRange     '1.4.2',
+125 silly addNameRange     '1.4.3',
+125 silly addNameRange     '1.5.1',
+125 silly addNameRange     '1.5.2',
+125 silly addNameRange     '1.6.0',
+125 silly addNameRange     '1.5.3',
+125 silly addNameRange     '1.6.1',
+125 silly addNameRange     '1.6.2',
+125 silly addNameRange     '1.7.0',
+125 silly addNameRange     '1.8.0',
+125 silly addNameRange     '1.8.1',
+125 silly addNameRange     '1.8.2',
+125 silly addNameRange     '1.8.3',
+125 silly addNameRange     '1.8.4',
+125 silly addNameRange     '1.9.0',
+125 silly addNameRange     '2.0.0',
+125 silly addNameRange     '2.0.1',
+125 silly addNameRange     '2.0.2',
+125 silly addNameRange     '2.0.3',
+125 silly addNameRange     '2.0.4',
+125 silly addNameRange     '2.0.5',
+125 silly addNameRange     '2.0.6',
+125 silly addNameRange     '2.0.7',
+125 silly addNameRange     '2.0.8',
+125 silly addNameRange     '2.0.9' ] ]
+126 silly addNamed nan@2.0.9
+127 verbose addNamed "2.0.9" is a plain semver version for nan
+128 silly cache afterAdd nan@2.0.9
+129 verbose afterAdd /Users/lukecleland/.npm/nan/2.0.9/package/package.json not in flight; writing
+130 verbose afterAdd /Users/lukecleland/.npm/nan/2.0.9/package/package.json written
+131 silly install resolved [ { name: 'nan',
+131 silly install resolved     version: '2.0.9',
+131 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+131 silly install resolved     main: 'include_dirs.js',
+131 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+131 silly install resolved     scripts:
+131 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+131 silly install resolved        'rebuild-tests': 'pangyp rebuild --msvs_version=2013 --directory test',
+131 silly install resolved        docs: 'doc/.build.sh' },
+131 silly install resolved     contributors:
+131 silly install resolved      [ [Object],
+131 silly install resolved        [Object],
+131 silly install resolved        [Object],
+131 silly install resolved        [Object],
+131 silly install resolved        [Object],
+131 silly install resolved        [Object],
+131 silly install resolved        [Object] ],
+131 silly install resolved     devDependencies:
+131 silly install resolved      { bindings: '~1.2.1',
+131 silly install resolved        commander: '^2.8.1',
+131 silly install resolved        glob: '^5.0.14',
+131 silly install resolved        'node-gyp': '~2.0.2',
+131 silly install resolved        pangyp: '~2.2.0',
+131 silly install resolved        tap: '~0.7.1',
+131 silly install resolved        xtend: '~4.0.0' },
+131 silly install resolved     license: 'MIT',
+131 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+131 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+131 silly install resolved     _id: 'nan@2.0.9',
+131 silly install resolved     _shasum: 'd02a770f46778842cceb94e17cab31ffc7234a05',
+131 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.0.9.tgz',
+131 silly install resolved     _from: 'nan@>=2.0.9 <3.0.0',
+131 silly install resolved     _npmVersion: '2.14.2',
+131 silly install resolved     _nodeVersion: '4.0.0',
+131 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+131 silly install resolved     maintainers: [ [Object], [Object] ],
+131 silly install resolved     dist:
+131 silly install resolved      { shasum: 'd02a770f46778842cceb94e17cab31ffc7234a05',
+131 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-2.0.9.tgz' },
+131 silly install resolved     directories: {},
+131 silly install resolved     readme: 'ERROR: No README data found!' } ]
+132 info install nan@2.0.9 into /Users/lukecleland/web/german-text-translator/node_modules/canvas
+133 info installOne nan@2.0.9
+134 verbose installOne of nan to /Users/lukecleland/web/german-text-translator/node_modules/canvas not in flight; installing
+135 verbose lock using /Users/lukecleland/.npm/_locks/nan-91c38aadbdb7e851.lock for /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+136 silly install write writing nan 2.0.9 to /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+137 verbose unbuild node_modules/canvas/node_modules/nan
+138 silly gentlyRm /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan is being purged from base /Users/lukecleland/web/german-text-translator
+139 verbose gentlyRm don't care about contents; nuking /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+140 verbose tar unpack /Users/lukecleland/.npm/nan/2.0.9/package.tgz
+141 verbose tar unpacking to /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+142 silly gentlyRm /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan is being purged
+143 verbose gentlyRm don't care about contents; nuking /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+144 silly gunzTarPerm modes [ '755', '644' ]
+145 silly gunzTarPerm extractEntry package.json
+146 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+147 silly gunzTarPerm extractEntry README.md
+148 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+149 silly gunzTarPerm extractEntry include_dirs.js
+150 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+151 silly gunzTarPerm extractEntry nan_converters.h
+152 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+153 silly gunzTarPerm extractEntry LICENSE.md
+154 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+155 silly gunzTarPerm extractEntry .dntrc
+156 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+157 silly gunzTarPerm extractEntry appveyor.yml
+158 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+159 silly gunzTarPerm extractEntry doc/new.md
+160 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+161 silly gunzTarPerm extractEntry doc/.build.sh
+162 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 493 ]
+163 silly gunzTarPerm extractEntry doc/buffers.md
+164 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+165 silly gunzTarPerm extractEntry doc/callback.md
+166 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+167 silly gunzTarPerm extractEntry doc/converters.md
+168 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+169 silly gunzTarPerm extractEntry doc/errors.md
+170 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+171 silly gunzTarPerm extractEntry doc/maybe_types.md
+172 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+173 silly gunzTarPerm extractEntry doc/methods.md
+174 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+175 silly gunzTarPerm extractEntry doc/asyncworker.md
+176 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+177 silly gunzTarPerm extractEntry doc/node_misc.md
+178 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+179 silly gunzTarPerm extractEntry doc/persistent.md
+180 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+181 silly gunzTarPerm extractEntry doc/scopes.md
+182 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+183 silly gunzTarPerm extractEntry doc/script.md
+184 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+185 silly gunzTarPerm extractEntry doc/string_bytes.md
+186 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+187 silly gunzTarPerm extractEntry doc/v8_internals.md
+188 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+189 silly gunzTarPerm extractEntry doc/v8_misc.md
+190 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+191 silly gunzTarPerm extractEntry nan.h
+192 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+193 silly gunzTarPerm extractEntry nan_callbacks.h
+194 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+195 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+196 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+197 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+198 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+199 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+200 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+201 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+202 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+203 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+204 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+205 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+206 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+207 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+208 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+209 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+210 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+211 silly gunzTarPerm extractEntry nan_new.h
+212 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+213 silly gunzTarPerm extractEntry nan_object_wrap.h
+214 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+215 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+216 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+217 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+218 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+219 silly gunzTarPerm extractEntry nan_string_bytes.h
+220 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+221 silly gunzTarPerm extractEntry nan_weak.h
+222 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+223 silly gunzTarPerm extractEntry CHANGELOG.md
+224 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+225 silly gunzTarPerm extractEntry tools/package.json
+226 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+227 silly gunzTarPerm extractEntry tools/README.md
+228 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+229 silly gunzTarPerm extractEntry tools/1to2.js
+230 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+231 verbose write writing to /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan/package.json
+232 info preinstall nan@2.0.9
+233 verbose readDependencies loading dependencies from /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan/package.json
+234 verbose readDependencies loading dependencies from /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan/package.json
+235 silly install resolved []
+236 verbose about to build /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+237 info build /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+238 info linkStuff nan@2.0.9
+239 silly linkStuff nan@2.0.9 has /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules as its parent node_modules
+240 verbose linkBins nan@2.0.9
+241 verbose linkMans nan@2.0.9
+242 verbose rebuildBundles nan@2.0.9
+243 info install nan@2.0.9
+244 info postinstall nan@2.0.9
+245 verbose unlock done using /Users/lukecleland/.npm/_locks/nan-91c38aadbdb7e851.lock for /Users/lukecleland/web/german-text-translator/node_modules/canvas/node_modules/nan
+246 verbose about to build /Users/lukecleland/web/german-text-translator/node_modules/canvas
+247 info build /Users/lukecleland/web/german-text-translator/node_modules/canvas
+248 info linkStuff canvas@1.2.9
+249 silly linkStuff canvas@1.2.9 has /Users/lukecleland/web/german-text-translator/node_modules as its parent node_modules
+250 verbose linkBins canvas@1.2.9
+251 verbose linkMans canvas@1.2.9
+252 verbose rebuildBundles canvas@1.2.9
+253 verbose rebuildBundles [ 'nan' ]
+254 info install canvas@1.2.9
+255 verbose unsafe-perm in lifecycle true
+256 info canvas@1.2.9 Failed to exec install script
+257 verbose unlock done using /Users/lukecleland/.npm/_locks/canvas-24e9fb555e9ebdcc.lock for /Users/lukecleland/web/german-text-translator/node_modules/canvas
+258 verbose stack Error: canvas@1.2.9 install: `node-gyp rebuild`
+258 verbose stack Exit status 1
+258 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+258 verbose stack     at emitTwo (events.js:87:13)
+258 verbose stack     at EventEmitter.emit (events.js:172:7)
+258 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+258 verbose stack     at emitTwo (events.js:87:13)
+258 verbose stack     at ChildProcess.emit (events.js:172:7)
+258 verbose stack     at maybeClose (internal/child_process.js:817:16)
+258 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+259 verbose pkgid canvas@1.2.9
+260 verbose cwd /Users/lukecleland/web/german-text-translator
+261 error Darwin 15.0.0
+262 error argv "/usr/local/Cellar/node/4.1.1/bin/node" "/usr/local/bin/npm" "install" "canvas"
+263 error node v4.1.1
+264 error npm  v2.14.4
+265 error code ELIFECYCLE
+266 error canvas@1.2.9 install: `node-gyp rebuild`
+266 error Exit status 1
+267 error Failed at the canvas@1.2.9 install script 'node-gyp rebuild'.
+267 error This is most likely a problem with the canvas package,
+267 error not with npm itself.
+267 error Tell the author that this fails on your system:
+267 error     node-gyp rebuild
+267 error You can get their info via:
+267 error     npm owner ls canvas
+267 error There is likely additional logging output above.
+268 verbose exit [ 1, true ]
+269 verbose unbuild node_modules/canvas
+270 info preuninstall canvas@1.2.9
+271 info uninstall canvas@1.2.9
+272 verbose unbuild rmStuff canvas@1.2.9 from /Users/lukecleland/web/german-text-translator/node_modules
+273 info postuninstall canvas@1.2.9
+274 silly gentlyRm /Users/lukecleland/web/german-text-translator/node_modules/canvas is being purged from base /Users/lukecleland/web/german-text-translator
+275 verbose gentlyRm don't care about contents; nuking /Users/lukecleland/web/german-text-translator/node_modules/canvas
+276 silly vacuum-fs purging /Users/lukecleland/web/german-text-translator/node_modules/canvas
+277 silly vacuum-fs quitting because other entries in /Users/lukecleland/web/german-text-translator/node_modules

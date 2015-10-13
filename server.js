@@ -2,6 +2,7 @@ var tesseract = require('node-tesseract');
 var multer = require('multer');
 var express = require('express');
 var app = express();
+//var rotate = require('rotate-image');
 var Imagemin = require('imagemin');
 var apikey = 'AIzaSyAl2_VXl-axjtU_zGj-s8h1ShY3H3Le_14';
 var googleTranslate = require('google-translate')(apikey);
@@ -26,7 +27,14 @@ var storage = multer.diskStorage({
     
     console.log('Image Uploaded...');
     io.emit('status', 'Image Uploaded...');
+      
+//    io.emit('status', 'Rotating Image...');
+//    console.log('Rotating Image...');
+      
+    //rotateImage(__dirname + '/uploads/latestfile.jpg', 1);
+    
     io.emit('status', 'Compressing Image...');
+    console.log('Compressing Image...');
       
     new Imagemin()
         .src(__dirname + '/uploads/*.{gif,jpg,png,svg}')
@@ -47,18 +55,20 @@ var storage = multer.diskStorage({
                     io.emit('status', 'File OCR Done... translating');
                     
                     // put together word list
-                    wordlist = '';
-                    inputtextArray = inputtext.split(' ');
-                    for(i=0;i<=inputtextArray.length;i++){
-                        googleTranslate.translate(inputtextArray[i], 'en', function(err, translation) {
-                            translatedword = translation.translatedText;
-                            var line = inputtextArray[i]+' : '+translatedword;
-                            wordlist += line;  
-                        });
-                    }  
+//                    wordlist = '';
+//                    inputtextArray = inputtext.split(' ');
+//                    for(i=0;i<=inputtextArray.length;i++){
+//                        googleTranslate.translate(inputtextArray[i], 'en', function(err, translation) {
+//                            translatedword = translation.translatedText;
+//                            var line = inputtextArray[i]+' : '+translatedword;
+//                            wordlist += line;  
+//                        });
+//                    }  
+//                    
+//                    console.log(wordlist);
+//                    io.emit('status', wordlist);
                     
-                    console.log(wordlist);
-                    io.emit('status', wordlist);
+                    io.emit('status', 'OCR Output: '+inputtext);
                     
                     googleTranslate.translate(inputtext, 'en', function(err, translation) {
                       console.log(translation.translatedText);
